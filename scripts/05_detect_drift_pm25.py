@@ -1,8 +1,8 @@
 """
 pulls PM2.5 + integrity
-computes change-points via rolling mean shift (simple, reproducible, no fancy deps)
+computes change-points via rolling mean shift 
 labels events as true_drift vs artifact_suspected
-refuses/blocks drift if recent integrity is weak (too many WARNs or low grades)
+refuses/blocks drift if recent integrity is weak
 writes to fact_drift_events
 """
 from __future__ import annotations
