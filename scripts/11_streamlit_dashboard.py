@@ -1,15 +1,15 @@
 """
 Trust-Aware Conversational BI (Streamlit) — Script 11
 
-What this app does (runtime behavior)
-- Reads ONLY precomputed pipeline tables from DuckDB (no recompute at runtime):
+What this app does
+- Reads precomputed pipeline tables from DuckDB:
   - fact_kpi_timeseries
   - fact_drift_events
   - fact_integrity_scores
   - fact_contributions
 
 Key UX requirements implemented
-- Single-page UI (no tabs).
+- Single-page Dashboard UI.
 - Explore filters are optional and do NOT constrain Q&A.
 - Q&A is LLM-first (OpenAI via OPENAI_API_KEY loaded from .env). If missing/errors -> deterministic fallback.
 - Trend chart + Map (Plotly choropleth if plotly installed, else fallback table + warning).
