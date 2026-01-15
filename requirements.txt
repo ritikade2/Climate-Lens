@@ -11,5 +11,6 @@ shapely
 pyproj
 fiona
 rtree
-python-dotenv>=1.0.0
+
 tqdm
+python-dotenv>=1.0.0
