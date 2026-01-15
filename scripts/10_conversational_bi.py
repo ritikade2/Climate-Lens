@@ -4,17 +4,6 @@ scripts/10_conversational_bi.py
 
 Conversational BI driver for Trust-Aware KPI Drift + Attribution.
 
-Edits (to accommodate precip + keep logic consistent across KPIs):
-- Added KPI config resolver (pm25 / precip / temp) so this script can run for precip without hardcoding PM2.5.
-- GEO trend mode now uses the correct per-geo KPI for the selected metric.
-- Attribution % now uses ABS-denominator (SUM(ABS(contribution_value))) to behave correctly for negative deltas too.
-- Prompts and printed headers no longer hardcode "GLOBAL PM2.5" (uses metric label).
-- CLI now supports --metric (pm25|precip|temp). You can still pass --kpi explicitly if you want.
-
-Assumptions:
-- Drift events are in fact_drift_events.
-- Integrity is in fact_integrity_scores.
-- Contributions are in fact_contributions (methods from your 08/08b scripts).
 """
 
 from __future__ import annotations
