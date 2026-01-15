@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
 """
-scripts/10_conversational_bi.py
-
 Conversational BI driver for Trust-Aware KPI Drift + Attribution.
-
 """
 
 from __future__ import annotations
