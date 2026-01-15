@@ -1,0 +1,50 @@
+temperature:
+  global_anomaly:
+    source: "gistemp"
+    granularity: "monthly"
+    geo_level: "global"
+    min_confidence: 80
+
+  country_anomaly:
+    source: "gistemp"
+    granularity: "monthly"
+    geo_level: "country"
+    min_confidence: 75
+
+  warming_rate:
+    method: "theil_sen"
+    window_years: 10
+    unit: "degC_per_decade"
+    min_confidence: 80
+
+  volatility:
+    method: "rolling_std"
+    window_months: 60
+
+air_quality:
+  pm25_annual_mean:
+    source: "openaq"
+    aggregation: "station_median"
+    granularity: "annual"
+    min_confidence: 70
+
+  pm25_exceedance_days:
+    guideline:
+      who_24hr: 15
+    granularity: "annual"
+
+  pm25_percentile:
+    scope: "all_countries"
+    granularity: "annual"
+
+composites:
+  climate_stress_index:
+    components:
+      - temperature.global_anomaly
+      - temperature.warming_rate
+      - air_quality.pm25_annual_mean
+    standardization: "zscore"
+    weights:
+      temperature.global_anomaly: 0.4
+      temperature.warming_rate: 0.3
+      air_quality.pm25_annual_mean: 0.3

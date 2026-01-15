@@ -1,0 +1,17 @@
+geo_levels:
+  - global
+  - country
+  - station
+  - grid
+
+countries:
+  source: "ISO-3166"
+  key: "iso3"
+  include_all: true
+
+regions:
+  predefined:
+    - name: "Global"
+      type: "aggregate"
+    - name: "South Asia"
+      countries: ["IND", "PAK", "BGD", "LKA", "NPL"]

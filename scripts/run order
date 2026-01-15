@@ -1,0 +1,10 @@
+00_init_project.py
+01_ingest_gistemp.py
+03_build_kpis_pm25.py
+01b_ingest_openmeteo_climate.py   # ← run here
+04_score_integrity_pm25.py
+05_detect_drift_pm25.py
+...
+10_conversational_bi.py
+11_streamlit_app.py
+

@@ -1,0 +1,15 @@
+duckdb
+pandas
+numpy
+
+requests
+cdsapi
+PyYAML
+
+geopandas
+shapely
+pyproj
+fiona
+rtree
+
+tqdm

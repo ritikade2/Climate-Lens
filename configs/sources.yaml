@@ -1,0 +1,28 @@
+gistemp:
+  source_name: "NASA GISTEMP v4"
+  provider: "NASA"
+  update_frequency: "monthly"
+  base_url: "https://data.giss.nasa.gov/gistemp/"
+  products:
+    global_monthly:
+      file: "GLB.Ts+dSST.csv"
+      level: "global"
+      unit: "degC_anomaly"
+    gridded_monthly:
+      file: "gistemp1200_GHCNv4_ERSSTv5.nc"
+      level: "grid"
+      unit: "degC_anomaly"
+  uncertainty_available: true
+
+cams:
+  dataset: "cams-global-reanalysis-eac4-monthly"
+  format: "netcdf_zip"
+  request_template:
+    variable:
+      - "particulate_matter_2.5um"
+    product_type:
+      - "monthly_mean"
+    date_format: "netcdf_zip"
+    year: ["2024"]
+    month: ["01"]
+

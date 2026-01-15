@@ -1,0 +1,19 @@
+confidence:
+  grades:
+    A: [85, 100]
+    B: [70, 84]
+    C: [55, 69]
+    D: [40, 54]
+    F: [0, 39]
+
+blocking_rules:
+  min_confidence_for_narrative: 70
+  max_missing_pct: 20
+  max_station_change_pct: 30
+  max_uncertainty_spike_pct: 25
+
+drift_detection:
+  min_effect_size:
+    temperature_anomaly: 0.1
+    pm25_annual_mean: 1.0
+  robustness_pass_rate: 0.7

@@ -1,0 +1,10 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.cache/
+data/raw/
+*.nc
+*.grib
+*.zip
