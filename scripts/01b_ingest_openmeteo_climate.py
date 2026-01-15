@@ -4,11 +4,6 @@ Ingest Open-Meteo Climate API daily data:
 - Aggregate to country-month KPIs,
 - Upsert into DuckDB fact_kpi_timeseries table
 
-Fixes vs your failing version:
-- Compute centroids from Natural Earth polygons (same approach as Script 03).
-- Handles 429 rate limits with Retry-After + exponential backoff + jitter.
-- Adds throttling between countries + optional batching (START_IDX/END_IDX).
-
 Writes these KPI IDs (country-month):
 - temp_country_monthly_mean        unit: degC
 - precip_country_monthly_sum       unit: mm
