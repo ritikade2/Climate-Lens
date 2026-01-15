@@ -1,8 +1,6 @@
 """
-Trust-Aware Conversational BI (Streamlit) — Script 11
 
-What this app does
-- Reads precomputed pipeline tables from DuckDB:
+Reads precomputed pipeline tables from DuckDB:
   - fact_kpi_timeseries
   - fact_drift_events
   - fact_integrity_scores
